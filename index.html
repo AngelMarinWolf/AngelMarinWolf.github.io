@@ -1,85 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Programacion Web - Main Page</title>
-	<meta charset="utf-8" />
-	<style type="text/css">
-		a.maintab:link , a.maintab:visited {
-			color: white;
-			text-decoration: none;
-			display: inline-block;
-			
-			width: 100%;
-			padding-top: 1em;
-			padding-bottom: 1em;
-			float: center;
-		}
-		a.maintab:hover {
-			color: white;
-			text-decoration: none;
-			background-color: #A70D5F;
-			
-			
-		}
-		a.maintab:active {
-			color: white;
-			text-decoration: none;
-			background-color: #A70D5F;
-		}
-		ul {
-			text-align: justify;
-			text-height: 1em;
-			color: white;
-			margin-right: 1em;
-		}
-	</style>
+	<title>Lord of the Wolves</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="img/wolf-icon.png">
+	<link rel="stylesheet" type="text/css" href="css/main-page.css">
 </head>
-<body background="img/Line-White.png" bgcolor="#141213" style="background-size:195px; background-repeat: repeat-x;">
+<body>
 
-<br />
-<br />
-
-<h1 align="center">
-	<font color=" #A70D5F">
-		Mi pagina Web
-	</font>
+<h1 class="main-title">
+	Mi Pagina Web
 </h1>
 
-<hr width="80%" />
-	
-<h3 align="center">
-	<font color="#FFFFFF">
-		Miguel Angel Marin Encina
-	</font>
-</h3>
+<hr width="80%" align="center" />
 
-<table width="100%" style="border-collapse: collapse;">
-	<tr align="center" style="border-bottom: solid 4px #A70D5F; color: white; margin: 0px; height: 3em;"  >
-		<td width="25%" align="center">
-			<b><a class="maintab" href="index.html">Inicio</a></b>
-		</td>
-		<td width="25%" align="center">
-			<b><a class="maintab" href="cv.html">Historia</a></b>
-		</td>
-		<td width="25%" align="center">
-			<b><a class="maintab" href="http://vive.guadalajara.gob.mx/" target="_blank">Ubicación</a></b>
-		</td>
-		<td width="25%" align="center">
-			<b><a class="maintab" href="contact.html">Contacto</a></b>
-		</td>
-	</tr>
+<ul width="100%" align="center" class="list-content">
+	<li class="align-list"><a href="index.html">Inicio</a></li>
+	<li class="align-list"><a href="cv.html">Historia</a></li>
+	<li class="align-list"><a href="http://vive.guadalajara.gob.mx/" target="_blank">Viajes</a></li>
+	<li class="align-list"><a href="contact.html">Practicas</a></li>
+	<li class="align-list"><a href="contact.html">Contacto</a></li>
+</ul>	
 
+<table width="95%" align="center" class="box-content">
 	<tr>
 		<td width="25%" align="center">
-			<img src="img/Yagami.jpg" style="max-width: 480px; width: 100%; float: center;" />
+			<img src="img/Yagami.jpg" width="100%" style="padding: 0; border-radius: 20px;" />
 		</td>
-		<td width="25%" align="center">
-			<ul>
+		<td width="50%" align="left">
+			<ul style="font-style: italic; font-family: New Century Schoolbook, serif;">
 				<li>
 					<b>Estoico:</b> Que muestra fortaleza y dominio sobre sí mismo, especialmente ante las desgracias y dificultades.
-				</li>
-				<li>
-					<q cite="Oscar Wilde" title="Oscar Wilde">Nunca dejes pasar una oportunidad que te haga feliz, aunque a los demas no les guste.</q>
 				</li>
 				<li>
 					<q cite="Oscar Wilde" title="Oscar Wilde">Somos nuestro propio demonio y hacemos de este mundo nuestro propio infierno.</q>
@@ -88,16 +39,17 @@
 					<q cite="Albert Einstein" title="Albert Einstein">Todos somos muy ingnorantes, lo que ocurre es que no todos ignoramos las mismas cosas.</q>
 				</li>
 				<li>
+					<q cite="Oscar Wilde" title="Oscar Wilde">Nunca dejes pasar una oportunidad que te haga feliz, aunque a los demas no les guste.</q>
+				</li>
+				<li>
 					<q cite="Nikola Tesla" title="Nikola Tesla">No creo que haya alguna emoción más intensa para un inventor que ver alguna de sus creaciones funcionando. Esa emoción hace que uno se olvide de comer, de dormir, de todo.</q>
 				</li>
 			</ul>
 		</td>
-		<td width="25%" align="center">
+		<td width="25%" align="center" class="contact-content">
 			<a href="https://www.google.com.mx/imgres?imgurl=http://www.hghotelgdl.com/wp-content/uploads/2014/04/Catedral_Guadalajara.jpg&imgrefurl=http://www.hghotelgdl.com/&h=1728&w=2304&tbnid=5Z6y9mhk8M7OwM:&tbnh=160&tbnw=213&docid=RyNTqndCFep3IM&itg=1&client=ubuntu&usg=__zdNrDpXUwDOj-8i6-Qts4fXUI60=" target="_blank">
-				<img src="img/Oracle.jpg" style="max-width: 480px; width: 100%; float: center;" />
+				<img src="img/Oracle.jpg" width="100%" style="border-radius: 50px;" />
 			</a>
-		</td>
-		<td width="25%" align="center" style="background-color: #692542; vertical-align: bottom;">
 			<p>
 			Direccion: Constitucion #1948 <br />
 			Colonia: Bellavista <br />
