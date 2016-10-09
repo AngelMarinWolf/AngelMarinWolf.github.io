@@ -1,0 +1,20 @@
+#practice-content {
+	border-radius: 20px;
+	border-style: solid;
+	border-width: 4px;
+	border-color: white;
+	color: white;
+	text-align: center;
+	background-color: #2980B9;
+}
+a.nice-links {
+	background-color: transparent;
+	color: white;
+	text-decoration: none;
+	width: 100%;
+}
+a.nice-links:hover {
+	background-color: white;
+	color: #2980B9;
+	text-decoration: none;
+}
