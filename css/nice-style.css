@@ -1,0 +1,44 @@
+body {
+	background-color:  #CFCFDE;
+	background-image: url(/img/Line-simple.png);
+	background-size:7em; 
+	background-repeat: repeat-x;
+}
+ul.list-content {
+	margin-top: 2em;
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	margin-left: 0;
+	padding-left: 0;
+}
+ul li.align-list {	flex-grow: 1;
+}
+ul li a:link, a:visited {
+	color: #2980B9;
+	width: 100%;
+	
+	text-decoration: none;
+	text-align: center;
+
+	padding-top: 1em;
+	padding-bottom: 1em;
+	
+	float: left;
+
+	border-width: 4px;
+	border-bottom-style: solid;
+	border-bottom-color: #0C0C62
+}
+ul li a:hover{
+	color: white;
+	text-decoration: none;
+	background-color: #2980B9;
+	border-bottom-color: white;
+}
+ul li a:active{
+	color: white;
+	text-decoration: none;
+	background-color: #2980B9;
+	border-bottom-color: white;
+}
