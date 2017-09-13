@@ -1,0 +1,6 @@
+machine:
+
+  timezone:
+    America/Monterrey
+  php:
+    version:7.1
