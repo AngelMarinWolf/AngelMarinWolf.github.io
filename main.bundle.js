@@ -129,7 +129,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#headline {\n  height: 720px;\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img/futuristic-city.jpg") + ");\n  background-repeat: no-repeat;\n  background-position: bottom;\n  background-size: cover;\n}\n\n.jumbotron {\n  background: transparent;\n  text-align: center;\n  padding-top: 250px;\n  color: white;\n}\n\nhr {\n  color: white;\n  border-width: 2px;\n  border-color: white;\n  width: 50%;\n}\n\n#puesto {\n  overflow: hidden;\n  white-space: nowrap;\n  margin: 0 auto;\n  padding: 0;\n  letter-spacing: .15em;\n  -webkit-animation:\n    type 4s steps(60,end);\n          animation:\n    type 4s steps(60,end);\n}\n\n.jumbotron a {\n  border-radius: 50%;\n  width: 40px;\n}\n\n/* === ANIMATIONS === */\n@-webkit-keyframes type {\n  from { width: 0}\n  to { width: 100% }\n}\n@keyframes type {\n  from { width: 0}\n  to { width: 100% }\n}\n\n@-webkit-keyframes blink-caret {\n  from, to { border-color: transparent }\n  50% { border-color: orange; }\n}\n\n@keyframes blink-caret {\n  from, to { border-color: transparent }\n  50% { border-color: orange; }\n}\n", ""]);
+exports.push([module.i, "#headline {\n  background-image: url(" + __webpack_require__("../../../../../src/assets/img/futuristic-city.jpg") + ");\n  background-repeat: no-repeat;\n  background-position: bottom;\n  background-size: cover;\n}\n\n@media (max-height: 480px) {\n  #headline {\n    height: 300px;\n  }\n  .jumbotron {\n    padding-top: 50px;\n  }\n}\n\n@media (min-height: 480px) and (max-height: 720px) {\n  #headline {\n    height: 480px;\n  }\n  .jumbotron {\n    padding-top: 100px;\n  }\n}\n\n@media (min-height: 720px) and (max-height: 1080px) {\n  #headline {\n    height: 720px;\n  }\n  .jumbotron {\n    padding-top: 200px;\n  }\n}\n\n@media (min-height: 1080px) {\n  #headline {\n    height: 1080px;\n  }\n  .jumbotron {\n    padding-top: 300px;\n  }\n}\n\n.jumbotron {\n  background: transparent;\n  text-align: center;\n  color: white;\n}\n\nhr {\n  color: white;\n  border-width: 2px;\n  border-color: white;\n  width: 50%;\n}\n\n@media (max-width: 575px) {\n  .employment_id {\n    font-size: .70em;\n  }\n}\n\n@media (min-width: 575px) and (max-width: 767px) {\n  .employment_id {\n    font-size: .80em;\n  }\n}\n\n@media (min-width: 767px) and (max-width: 991px) {\n  .employment_id {\n    font-size: .90em;\n  }\n}\n\n@media (min-width: 991px) and (max-width: 1199px) {\n  .employment_id {\n    font-size: 1em;\n  }\n}\n\n.employment_id {\n  overflow: hidden;\n  margin: 0 auto;\n  padding: 0;\n  letter-spacing: .10em;\n}\n\n.jumbotron a {\n  border-radius: 50%;\n  width: 40px;\n}\n", ""]);
 
 // exports
 
@@ -142,7 +142,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/headline/headline.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section id=\"headline\">\n  <div class=\"container-fluid mt-5\">\n    <div class=\"jumbotron\">\n      <p>Hi, I am</p>\n      <h1><strong>ANGEL MARIN</strong></h1>\n      <hr class=\"d-none d-md-block \">\n      <h2>\n        <p id=\"puesto\">\n          I am a <strong>SysAdmin</strong>\n        </p>\n      </h2>\n      <a href=\"https://www.facebook.com/angel.yagami.16\" target=\"_blank\" class=\"btn btn-outline-secondary\">\n        <i class=\"fa fa-facebook\" aria-hidden=\"true\"></i>\n      </a>\n      <a href=\"#\" target=\"_blank\" class=\"btn btn-outline-secondary\">\n        <i class=\"fa fa-twitter\" aria-hidden=\"true\"></i>\n      </a>\n      <a href=\"mailto:marin.miguelangel96@gmail.com\" target=\"_blank\" class=\"btn btn-outline-secondary\">\n        <i class=\"fa fa-envelope\" aria-hidden=\"true\"></i>\n      </a>\n      <a href=\"skype:xxyagami2xx?call\" class=\"btn btn-outline-secondary\">\n        <i class=\"fa fa-skype\" aria-hidden=\"true\"></i>\n      </a>\n      <a href=\"https://www.linkedin.com/in/miguel-angel-marin-encina-aa9a8a130/\" target=\"_blank\" class=\"btn btn-outline-secondary\">\n        <i class=\"fa fa-linkedin\" aria-hidden=\"true\"></i>\n      </a>\n      <a href=\"https://www.youtube.com/channel/UCFK1jlKyZ_583dAnzfEHE-g\" target=\"_blank\" class=\"btn btn-outline-secondary\">\n        <i class=\"fa fa-youtube-play\" aria-hidden=\"true\"></i>\n      </a>\n      <a href=\"https://github.com/AngelMarinWolf\" target=\"_blank\" class=\"btn btn-outline-secondary\">\n        <i class=\"fa fa-github-alt\" aria-hidden=\"true\"></i>\n      </a>\n    </div>\n  </div>\n\n</section>\n"
+module.exports = "<section id=\"headline\">\n  <div class=\"container-fluid mt-5\">\n    <div class=\"jumbotron\">\n      <p>Hi, I am</p>\n      <h1><strong>ANGEL MARIN</strong></h1>\n      <hr class=\"d-none d-md-block \">\n      <h2>\n        <p class=\"employment_id\" [ngClass]=\"{'animated fadeInDown': employment_in }\">\n          I am a <strong>{{employment_display}}</strong>\n        </p>\n      </h2>\n      <a href=\"https://www.facebook.com/angel.yagami.16\" target=\"_blank\" class=\"btn btn-outline-secondary d-none d-md-inline-block\">\n        <i class=\"fa fa-facebook\" aria-hidden=\"true\"></i>\n      </a>\n      <a href=\"#\" target=\"_blank\" class=\"btn btn-outline-secondary d-none d-md-inline-block\">\n        <i class=\"fa fa-twitter\" aria-hidden=\"true\"></i>\n      </a>\n      <a href=\"mailto:marin.miguelangel96@gmail.com\" target=\"_blank\" class=\"btn btn-outline-secondary\">\n        <i class=\"fa fa-envelope\" aria-hidden=\"true\"></i>\n      </a>\n      <a href=\"skype:marin.miguelangel96@outlook.com?chat\" class=\"btn btn-outline-secondary\">\n        <i class=\"fa fa-skype\" aria-hidden=\"true\"></i>\n      </a>\n      <a href=\"https://www.linkedin.com/in/miguel-angel-marin-encina-aa9a8a130/\" target=\"_blank\" class=\"btn btn-outline-secondary\">\n        <i class=\"fa fa-linkedin\" aria-hidden=\"true\"></i>\n      </a>\n      <a href=\"https://www.youtube.com/channel/UCFK1jlKyZ_583dAnzfEHE-g\" target=\"_blank\" class=\"btn btn-outline-secondary d-none d-md-inline-block\">\n        <i class=\"fa fa-youtube-play\" aria-hidden=\"true\"></i>\n      </a>\n      <a href=\"https://github.com/AngelMarinWolf\" target=\"_blank\" class=\"btn btn-outline-secondary d-none d-md-inline-block\">\n        <i class=\"fa fa-github-alt\" aria-hidden=\"true\"></i>\n      </a>\n    </div>\n  </div>\n\n</section>\n"
 
 /***/ }),
 
@@ -164,8 +164,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var HeadlineComponent = (function () {
     function HeadlineComponent() {
+        var _this = this;
+        this.employment_in = true;
+        this.employment = ['SysAdmin', 'DevOps', 'AWS Engineer'];
+        this.employment_display = "SysAdmin";
+        this.num = 0;
+        setInterval(function () {
+            _this.employment_display = _this.employment[_this.num.valueOf()];
+            _this.employment_in = true;
+            setTimeout(function () {
+                _this.employment_in = false;
+            }, 1000);
+            if (_this.num == _this.employment.length - 1) {
+                _this.num = -1;
+            }
+            _this.num += 1;
+        }, 2000);
     }
     HeadlineComponent.prototype.ngOnInit = function () {
+    };
+    HeadlineComponent.prototype.ngAfterViewInit = function () {
     };
     HeadlineComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
